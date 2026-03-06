@@ -1,0 +1,17 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/dist/css/stayle.css ",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/dist/css/stayle.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
