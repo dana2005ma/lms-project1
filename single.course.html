@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lms |  الكورسات</title>
+    <link rel="stylesheet" href="src/dist/css/stayle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- choise font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Fjalla+One&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+ <!-- start nav -->
+    <nav class="bg-[#e7caf6] border-gray-200 dark:bg-gray-900 drop-shadow-sm sticky top-0 z-50  ">
+        <div class="   max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="dist/images/logo.png" class="h-8" alt=" Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">school kids</span>
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button"
+                    class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                    data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-8 h-8 rounded-full" src="dist/images/boss1.jpg" alt="user photo">
+                </button>
+                <!-- Dropdown menu -->
+                <div class="absolute z-20 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                    </div>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                                out</a>
+                        </li>
+                    </ul>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 m-4 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                <ul
+                    class="flex md:items-center flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                            aria-current="page">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a href="single.course.html"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">حول</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">الخدمات</a>
+                    </li>
+                    <li>
+                        <a href="single.post.html"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">المدونه</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">اتصل
+                            بنا</a>
+                    </li>
+                    <li class="mr-2">
+                        <button id="theme-toggle" type="button"
+                            class="text-gray-500 dark:text-gray-400  hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none  rounded-lg text-sm p-2.5">
+                            <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                            </svg>
+                            <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor"
+                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav -->
+    <!--start course header section -->
+    <section class="bg-[#ba95c9] dark:bg-[#35024ed0]  ">
+        <div class="page-header py-[50px] max-w-7xl mx-auto flex justify-between pr-3 ">
+            <div class="grow flex flex-col justify-center ">
+                <h1 class="text-3xl font-bold text-white dark:text-[#e0c5eb]  mb-5">روضة الاطفال الخاصة</h1>
+                <p class="text-2xl mb-5  font-bold  text-white dark:text-[#e0c5eb]  ">المديرة:<span
+                        class=" text-white text-3xl font-bold  dark:text-[#e0c5eb] ">دانه المعاني</span></p>
+                <div class="flex dark:text-[#e0c5eb]  text-white ">
+                    <li class="m-2 gap-1.5">
+                        <i class="fa-regular fa-square-check"></i>
+                        اذار/ 2026
+                    </li>
+                    <li class="m-2 gap-1.5">
+
+                        <i class="fa-solid fa-file-lines"></i>
+                        15/class
+                    </li>
+                    <li class="m-2 gap-1.5">
+
+                        <i class="fa-solid fa-globe"></i>
+                        Engligh
+                    </li>
+                    <li>
+                        <i></i>
+                    </li>
+
+                </div>
+            </div>
+     
+        </div>
+        
+    </section>
+    <!--end course header section -->
+
+
+    <div class="main-content">
+        <div class="inner-content max-w-7xl mx-auto flex justify-between gap-5 flex-col-reverse md:flex-row">
+            <div class="content bg-[##E7CAF6] grow  m-3 md:m-0 ">
+
+
+
+
+                <div
+                    class="text-sm font-medium text-center text-[#C999BF] border-b border-[#C999BF]  dark:text-gray-400 dark:border-gray-700">
+                    <ul class="flex flex-wrap -mb-px " data-tabs-toggle="#tabcontent">
+                        <li class="me-2">
+                            <a href="#" data-tabs-target="#discraption" role="tab" aria-controls="discraption"
+                                aria-selected="true"
+                                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg  hover:text-[#C999BF] hover:border-[#C999BF] dark:hover:text-[#C999BF] font-bold">تفاصيل
+                                عن المدرسة</a>
+                        </li>
+                        <li class="me-2">
+                            <a href="#" data-tabs-target="#curriculm" role="tab" aria-controls="curriculm"
+                                aria-selected="false"
+                                class= "inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-[#C999BF]  hover:border-[#C999BF]  dark:hover:text-[#C999BF] "
+                                aria-current="page">المنهاج</a>
+                        </li>
+                        <li class="me-2">
+                            <a href="#" data-tabs-target="#about" role="tab" aria-controls="about" aria-selected="false"
+                                class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-[#C999BF]  hover:border-[#C999BF]  dark:hover:text-[#C999BF] ">حول
+                                المديرة</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div id="#tabcontent">
+                    <div id="discraption">
+                        <div class="grid md:grid-cols-2 grid-cols-1 bg-[#E7CAF6] gap-2 dark:bg-[#E0C5E3] p-5 rounded-[10px] mt-5">
+                            <div>
+                                 <ul class="flex flex-col gap-4">
+                            <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>فهم أساسيات النمو الإدراكي والسلوكي للأطفال  .</span>
+                            </li>
+                                     <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>تطبيق استراتيجيات فعّالة لتنمية مهارات التركيز والانتباه.</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>تصميم بيئة تعليمية آمنة ومحفزة للسلوك الإيجابي.</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>التعامل مع السلوكيات الصعبة بأساليب تربوية بنّاءة.</span>
+                            </li>
+
+                          </ul>
+                        </div>
+                        <div class="">
+                          <ul class="flex flex-col gap-4">
+                          <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>استخدام أنشطة وألعاب تعليمية لتحفيز التفكير وحل المشكلات.</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>تعزيز التواصل اللفظي وغير اللفظي لدى الأطفال بطرق تفاعلية.</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1"></i>
+                              <span>تقييم التقدم الإدراكي والسلوكي ووضع خطط تطوير فردية.</span>
+                            </li>
+
+                            <li>
+                              <i class="fa-solid fa-circle-check text-slate-600 dark:text-yellow-50 ml-1    "></i>
+                              <span>التعاون مع أولياء الأمور لدعم الطفل داخل وخارج الصف.</span>
+                            </li>
+                            </ul>
+                                </ul>
+                            </div>
+                           
+                        </div>
+                        <p class="mt-5 leading-9">
+                             تعمل هذه المدرسة   على رحلة تعليمية شاملة تهدف إلى تمكين المعلمين،  وأولياء الأمور من فهم أعمق احتيجات الأطفال   في عمر ال3 لل6 والعمل على تطوير قدراتهم الإدراكية والسلوكية من خلال أساليب علمية وتطبيقية حديثة. تهدف الدورة إلى بناء وعي متكامل حول كيفية اكتشاف القدرات الفريدة لكل طفل، وتوظيف الأدوات والوسائل التعليمية التي تساعده على النمو بثقة واستقلالية.
+                            </p>
+                        <img class="mt-5 h-[400px] w-full " src="dist/images/tabcontent1.jpg" alt="">
+                        <p class="mt-5 leading-9 ">
+                            يتعلم المشاركون كيفية التعاون مع الأسرة والمعلمين الآخرين لتحقيق التكامل في رعاية الطفل وتطويره، بحيث تمتد الجهود التعليمية إلى بيئة المنزل والمجتمع. كما تقدم الدورة أدوات تقييم فعالة لمتابعة التقدم الإدراكي والسلوكي للأطفال بشكل مستمر، وضمان تحقيق نتائج ملموسة وواضحة.
+                            بنهاية الدورة، يصبح المتدرب قادرًا على إعداد برامج تربوية متكاملة تراعي الفروق الفردية بين الأطفال، وتنمية مهاراتهم الإدراكية والسلوكية وفق أسس علمية مدروسة. إنها فرصة حقيقية لكل من يسعى إلى إحداث فرق في حياة الأطفال، والمساهمة في تمكينهم من التعلم، والتفاعل، والنمو بثقة واستقلالية في بيئة آمنة ومحفزة.
+                        </p>
+                        <img class="mt-5 h-[400px] w-full " src="dist/images/tabcontent2.jpg" alt="">
+                        
+                <div class="">
+                          <p class="flex items-center justify-center mb-5">
+                            انضم الآن إلى هذه الرحلة التعليمية الملهمة، وكن سببًا في صناعة مستقبل أفضل للأطفال  .
+                            ابدأ اليوم بخطوة نحو التغيير الحقيقي وبناء جيل أكثر وعيًا، تفاعلًا، وسعادة.
+                        </p>
+                        
+                </div>
+                    </div>
+                    <div id="curriculm">
+                        <div class="mt-5" id="accordion-color" data-accordion="collapse"
+                            data-active-classes="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white">
+                            <h2 id="accordion-color-heading-1">
+                               <button type="button"
+                            class="flex items-center justify-between w-full p-5  rtl:text-right text-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl    dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] hover:bg-[#cdabdca9] dark:hover:bg-[#63317c] gap-3"
+                            data-accordion-target="#accordion-color-body-1" aria-expanded="false"
+                            aria-controls="accordion-color-body-1">
+                                    <span> 1- التقييم والتقدم:</span>
+                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M9 5 5 1 1 5" />
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-color-body-1" class="hidden" aria-labelledby="accordion-color-heading-1">
+                                  <div class="p-5 bordertext-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl flex justify-between   dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] ">
+                                    <div class=""><a href=""><i class="fa-solid fa-file-lines ml-2.5"></i></a>
+                                    <a>أساليب التقييم: استخدام الملاحظات، والسجلات اليومية، والمشاريع الصغيرة لتقييم تقدم الأطفال</a>
+                                    </div>
+                                    <div class="">
+                                           <span>60 views</span>
+        <a href=""><i class="fa-solid fa-eye mr-2.5"></i></a>
+                                    </div>
+                                </div>
+                                  <div class="p-5 bordertext-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl flex justify-between   dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] ">
+                                    <div class=""><a href=""><i class="fa-solid fa-file-lines ml-2.5"></i></a>
+                                    <a>  تقارير للأهل: تقديم تقارير دورية للأهل حول تقدم أطفالهم ومهاراتهم الجديدة.</a>
+                                    </div>
+                                    <div class="">
+                                           <span>80 views</span>
+        <a href=""><i class="fa-solid fa-eye mr-2.5"></i></a>
+                                    </div>
+                                </div>
+                              
+                               
+                            </div>
+                            <h2 id="accordion-color-heading-2">
+                               <button type="button"
+                            class="flex items-center justify-between w-full p-5  rtl:text-right text-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl    dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] hover:bg-[#cdabdca9] dark:hover:bg-[#63317c] gap-3"
+                            data-accordion-target="#accordion-color-body-2" aria-expanded="false"
+                            aria-controls="accordion-color-body-2">
+                                    <span> 2-التكنولوجيا في التعليم:</span>
+                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M9 5 5 1 1 5" />
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-color-body-2" class="hidden" aria-labelledby="accordion-color-heading-2">
+                                  <div class="p-5 bordertext-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl flex justify-between   dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] ">
+                                    <div class=""><a href=""><i class="fa-solid fa-file-lines ml-2.5"></i></a>
+                                    <a>استخدام التكنولوجيا بشكل معتدل: كيف يمكن استخدام الأجهزة اللوحية أو التطبيقات التعليمية لتحفيز التعلم .</a>
+                                    </div>
+                                    <div class="">
+                                           <span>90 views</span>
+        <a href=""><i class="fa-solid fa-eye mr-2.5"></i></a>
+                                    </div>
+                                </div>
+                               
+                                  <div class="p-5 bordertext-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl flex justify-between   dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] ">
+                                    <div class=""><a href=""><i class="fa-solid fa-file-lines ml-2.5"></i></a>
+                                    <a> تعليم السلامة الرقمية: تعليم الأطفال أساسيات الأمان عند استخدام التكنولوجيا.</a>
+                                    </div>
+                                    <div class="">
+                                           <span>150 views</span>
+        <a href=""><i class="fa-solid fa-eye mr-2.5"></i></a>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <h2 id="accordion-color-heading-3">
+                               <button type="button"
+                            class="flex items-center justify-between w-full p-5  rtl:text-right text-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl    dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] hover:bg-[#cdabdca9] dark:hover:bg-[#63317c] gap-3"
+                            data-accordion-target="#accordion-color-body-3" aria-expanded="false"
+                            aria-controls="accordion-color-body-3">
+                                    <span> 3-دور الأهل في التعليم:</span>
+                                    <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M9 5 5 1 1 5" />
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-color-body-3" class="hidden" aria-labelledby="accordion-color-heading-3">
+                                  <div class="p-5 bordertext-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl flex justify-between   dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] ">
+                                    <div class=""><a href=""><i class="fa-solid fa-file-lines ml-2.5"></i></a>
+                                    <a>ورش عمل للأهل: تنظيم ورش عمل لتعليم الأهل كيفية دعم تعلم أطفالهم في المنزل.</a>
+                                    </div>
+                                    <div class="">
+                                           <span>300 views</span>
+        <a href=""><i class="fa-solid fa-eye mr-2.5"></i></a>
+                                    </div>
+                                </div>
+                                  <div class="p-5 bordertext-[#5b2974] border border-b-0 border-[#CDABDC] mb-1 rounded-t-xl flex justify-between   dark:border-[#5b2974]   dark:text-[#CDABDC]  bg-[#CDABDC] font-bold dark:bg-[#5b2974] ">
+                                    <div class=""><a href=""><i class="fa-solid fa-file-lines ml-2.5"></i></a>
+                                    <a>التواصل الفعال: استراتيجيات لتحسين التواصل بين المعلمين والأهل.</a>
+                                    </div>
+                                    <div class="">
+                                           <span>450 views</span>
+        <a href=""><i class="fa-solid fa-eye mr-2.5"></i></a>
+                                    </div>
+                                </div>
+                            
+                               
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <div id="about" class="mt-5">
+                    
+                           <h2 class="text-2xl mx-10  font-bold"> سارة مصري </h2>
+                        <div class="flex items-center gap-6 my-7">
+                          <img class="w-[200px] rounded-full  " src="dist/images/boss1.jpg" alt="">
+                 
+                        <span class="font-bold text-xl  ">
+                          <i class="fa-solid fa-user-group m-3 font-bold"></i>
+                          2000 طالب
+                        </span>
+
+                       <span class="font-bold text-xl">
+                          <i class="fa-solid fa-book m-3  font-bold"></i>
+                          20 كورس تم نشره
+                        </span>
+                      </div>
+                      <p class="font-bold text-xl">مدربه  تنمية المهارات الإدراكية والسلوكية للاطفال </p>
+                        <div class="flex text-[#E7CAF6] text-xl  gap-3 mt-5">
+                        <a href=""><i class="fa-brands fa-facebook   bg-[#5A316F] p-2 rounded-full"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter bg-[#5A316F] p-2 rounded-full"></i></a>
+                        <a href=""><i class="fa-brands fa-square-instagram bg-[#5A316F] p-2 rounded-full"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp bg-[#5A316F] p-2 rounded-full"></i></a>
+
+                    </div>
+                    </div>
+                    
+
+
+                    
+                </div>
+
+                               <div class="reviws px-5 py-2mt-10 mb-5 ">
+                  <h2 class="text-3xl font-bold mt-5  text-slate-600">التعليقات</h2>
+                  <div class="flex items-center gap-5">
+                    <h3 class="text-3xl font-bold my-5 text-slate-600  ">250</h3>
+                    <div class="stars flex gap-3 text-[#683381]">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="progress   bg-[#E7CAF6] dark:bg-slate-800 rounded-[10px] p-5">
+
+                    <div class="flex gap-4        text-2xl items-center md:w-[70%] mb-2">
+                      <span class="dark:text-white text-slate-600">5</span>
+                      <span class="font-bold dark:text-white text-slate-600">32%</span>
+                       <div class="w-full bg-gray-100 rounded-full">
+                      <div class=" bg-[#683381] text-xs font-medium  text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center text-white" style="width: 32%">32%</div>
+                    </div>
+                    </div>
+                    <div class="flex gap-4 text-2xl items-center md:w-[70%] mb-2">
+                      <span class="dark:text-white text-slate-600">4</span>
+                      <span class="font-bold dark:text-white text-slate-600">25%</span>
+                       <div class="w-full bg-gray-100 rounded-full">
+                      <div class=" bg-[#683381] text-xs font-medium  text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center text-white" style="width: 25%">25%</div>
+                    </div>
+                    </div>
+                    <div class="flex gap-4 text-2xl items-center md:w-[70%] mb-2">
+                      <span class="dark:text-white text-slate-600">3</span>
+                      <span class="font-bold dark:text-white text-slate-600">18%</span>
+                       <div class="w-full bg-gray-100 rounded-full">
+                      <div class=" bg-[#683381] text-xs font-medium  text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center text-white" style="width: 25%">18%</div>
+                    </div>
+                    </div>
+                    <div class="flex gap-4 text-2xl items-center md:w-[70%] mb-2">
+                      <span class="dark:text-white text-slate-600">2</span>
+                      <span class="font-bold dark:text-white text-slate-600">15%</span>
+                       <div class="w-full bg-gray-100 rounded-full">
+                      <div class=" bg-[#683381] text-xs font-medium  text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center text-white" style="width: 15%">15%</div>
+                    </div>
+                    </div>
+                    <div class="flex gap-4 text-2xl items-center md:w-[70%] mb-2">
+                      <span class="dark:text-white text-slate-600">1</span>
+                      <span class="font-bold dark:text-white text-slate-600">10%</span>
+                       <div class="w-full bg-gray-100 rounded-full">
+                      <div class=" bg-[#683381] text-xs font-medium  text-center p-0.5 leading-none rounded-full h-4 flex items-center justify-center text-white" style="width: 10%">10%</div>
+                    </div>
+                    </div>
+    </div>
+        </div>
+
+            </div>
+            <div class="course-details md:w-[25%] md:relative top-[-210px]   shrink-0 bg-[#E7CAF6] dark:bg-[#E0C5E3] m-3 md:m-0  md:rounded-b-[10px] h-full ">
+               <div class="">
+                <img src="dist/images/catrogiry3.jpg" alt="" class="w-full   h-[210px]  rounded-t-[10px]">
+            </div>
+              <div class="p-5  ">
+                  <p class="text-2xl font-bold mb-5">السعر:250$</p>
+                  <button class="w-full btn">سجل طفلك الان</button>
+                  <div class="flex flex-col mt-4">
+                      <span>
+                            <i class="fa-solid fa-user-group ml-2"></i>
+                            2000 طالب
+                          </span>
+                
+                          <span>
+                            <i class="fa-solid fa-book ml-2"></i>
+                            20 كورس تم نشره
+                          </span>
+                   <span>
+                          <i class="fa-solid fa-mobile-screen-button ml-2"></i>
+                          متاح على التطبيق                 
+                        </span>
+                
+                        <span>
+                          <i class="fa-solid fa-infinity ml-2"></i>
+                          وصول غير محدود مدى الحياة
+                        </span>
+                
+                        <span>
+                          <i class="fa-solid fa-signal ml-2"></i>
+                          مستوى المهارات: جميع المستويات             
+                        </span>
+                            <span>
+                          <i class="fa-solid fa-globe ml-2"></i>
+                          اللغة:العربية                 
+                        </span>
+                
+                        <span>
+                          <i class="fa-solid fa-clipboard-question ml-2"></i>
+                          الاختبار واحد                
+                        </span>
+                
+                
+                        <span>
+                          <i class="fa-solid fa-pen ml-2"></i>
+                          توجد تقييمات                
+                        </span>
+                  </div>
+              </div>
+            </div>
+      
+              </div>
+                      <!--start blog section  -->
+    <section class="all-blogs     py-3   ">
+        <h2 class="text-[#5b2974]  font-bold text-3xl  text-center leading-11"> كافة الاخبار </h2>
+        <p class="md:w-[65%] w-[90%] mx-auto text-center dark:text-white font-bold text-xl mb-5">تعتبر روضة الأطفال نقطة
+            انطلاق مهمة في حياة الطفل التعليمية، حيث تساعدهم على الانتقال بسلاسة إلى المرحلة الابتدائية.
+
+        </p>
+        <div class="p-4 md:p-0 max-w-7xl mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div
+                class="activity relative dark:bg-[#35024E] bg-[#CDABDC] rounded-md  overflow-hidden hover:translate-1 transition-all ease-in-out cursor-pointer">
+                <div
+                    class="absolute top-[5px] right-[5px] dark:bg-[#35024E] bg-[#CDABDC] py-2 px-3 rounded-md dark:text-white text-[#35024E] ">
+                    الرسم
+                </div>
+                <div class="activity-img w-full h-[200px]">
+                    <img src="dist/images/catrogiry2.jpg" class="w-full h-[200px] object-cover" alt="">
+                </div>
+                <div class="activity-info p-2">
+                    <h3 class="font-bold my-3 text-2xl text-center dark:text-[#e9bcff] text-[#5b2974] ">الرسم باستخدام
+                        الألوان.</h3>
+                    <p class="font-bold text-xl text-center dark:text-[#e9bcff] text-[#5b2974] ">يمكن للأطفال التعبير عن
+                        مشاعرهم وأفكارهم من خلال الرسم الحر. يمكن أن يُطلب منهم رسم مشهد من الطبيعة أو صورة تعكس شعورهم.
+                        هذا النشاط يعزز الإبداع ويساعد الأطفال على تطوير مهاراتهم الفنية.</p>
+                    <div class="price flex mt-8 justify-start gap-6 text-2xl dark:text-[#e9bcff] text-[#5b2974] ">
+                        <div class="">
+                            <img src="dist/images/student2.jpg" style="width:50px; height:50px;"
+                                class="object-cover rounded-full " alt="">
+                        </div>
+                        <div class="">
+                            <h3>دانه</h3>
+                            <span>5/3/2026</span>
+                        </div>
+
+                    </div>
+                    <a href="single.post.html"> <button class="btn w-full ">لمعرفة المزيد</button></a>
+                </div>
+
+            </div>
+            <div
+                class="activity relative dark:bg-[#35024E] bg-[#CDABDC] rounded-md  overflow-hidden hover:translate-1 transition-all ease-in-out cursor-pointer">
+                <div
+                    class="absolute top-[5px] right-[5px] dark:bg-[#35024E] bg-[#CDABDC] py-2 px-3 rounded-md dark:text-white text-[#35024E] ">
+                    الكيمياء
+                </div>
+                <div class="activity-img w-full h-[200px]">
+                    <img src="dist/images/catrogiry3.jpg" class="w-full h-[200px] object-cover" alt="">
+                </div>
+                <div class="activity-info p-2">
+                    <h3 class="font-bold my-3 text-2xl text-center dark:text-[#e9bcff] text-[#5b2974] ">تجربة البركان.
+                    </h3>
+                    <p class="font-bold text-xl text-center dark:text-[#e9bcff] text-[#5b2974] ">يمكن للأطفال استخدام
+                        صودا الخبز والخل لصنع "بركان". عند خلط المادتين، يحدث تفاعل كيميائي ينتج عنه فقاعات ورغوة تشبه
+                        ثوران البركان. هذا النشاط يعلم الأطفال عن التفاعلات الكيميائية بطريقة ممتعة وآمنة.
+                    </p>
+                    <div class="price flex mt-8 justify-start gap-6 text-2xl dark:text-[#e9bcff] text-[#5b2974] ">
+                        <div class="">
+                            <img src="dist/images/student1.png  " style="width:50px; height:50px;"
+                                class="object-cover rounded-full " alt="">
+                        </div>
+                        <div class="">
+                            <h3>احمد</h3>
+                            <span>5/3/2026</span>
+                        </div>
+
+                    </div>
+                    <a href="single.post.html"> <button class="btn w-full ">لمعرفة المزيد</button></a>
+                </div>
+
+            </div>
+            <div
+                class="activity relative dark:bg-[#35024E] bg-[#CDABDC] rounded-md  overflow-hidden hover:translate-1 transition-all ease-in-out cursor-pointer">
+                <div
+                    class="absolute top-[5px] right-[5px] dark:bg-[#35024E] bg-[#CDABDC] py-2 px-3 rounded-md dark:text-white text-[#35024E] ">
+                    التكنلوجيا
+                </div>
+                <div class="activity-img w-full h-[200px]">
+                    <img src="dist/images/catrogiry6.jpg" class="w-full h-[200px] object-cover" alt="">
+                </div>
+                <div class="activity-info p-2">
+                    <h3 class="font-bold my-3 text-2xl text-center dark:text-[#e9bcff] text-[#5b2974] "> التطبيقات
+                        التعليمية.</h3>
+                    <p class="font-bold text-xl text-center dark:text-[#e9bcff] text-[#5b2974] ">يمكن للأطفال استخدام
+                        تطبيقات تعليمية تفاعلية على الأجهزة اللوحية أو الهواتف الذكية لتعلم الرياضيات أو العلوم أو
+                        اللغات بطريقة ممتعة. هذه الأنشطة تعزز التعلم الذاتي والتفاعل مع الاصدقاء.</p>
+                    <div class="price flex mt-8 justify-start gap-6 text-2xl dark:text-[#e9bcff] text-[#5b2974] ">
+                        <div class="">
+                            <img src="dist/images/student1.jpg" style="width:50px; height:50px;"
+                                class="object-cover rounded-full " alt="">
+                        </div>
+                        <div class="">
+                            <h3>يامن</h3>
+                            <span>5/3/2026</span>
+                        </div>
+
+                    </div>
+                    <a href="single.post.html"> <button class="btn w-full ">لمعرفة المزيد</button></a>
+                </div>
+
+            </div>
+            <div
+                class="activity relative dark:bg-[#35024E] bg-[#CDABDC] rounded-md  overflow-hidden hover:translate-1 transition-all ease-in-out cursor-pointer">
+                <div
+                    class="absolute top-[5px] right-[5px] dark:bg-[#35024E] bg-[#CDABDC] py-2 px-3 rounded-md dark:text-white text-[#35024E] ">
+                    العاب الذهن
+                </div>
+                <div class="activity-img w-full h-[200px]">
+                    <img src="dist/images/catrogiry8.jpg" class="w-full h-[200px] object-cover" alt="">
+                </div>
+                <div class="activity-info p-2">
+                    <h3 class="font-bold my-3 text-2xl text-center dark:text-[#e9bcff] text-[#5b2974] ">الألعاب
+                        التعليمية</h3>
+                    <p class="font-bold text-xl text-center dark:text-[#e9bcff] text-[#5b2974] ">مثل ألعاب الرياضيات أو
+                        الكلمات المتقاطعة، حيث يتعلم الأطفال المفاهيم الأساسية بطريقة ممتعة.فهي
+                        تعزز المهارات الأكاديمية وتساعد الأطفال على فهم المواد الدراسية بطريقة تفاعلية.
+
+                    </p>
+                    <div class="price flex mt-8 justify-start gap-6 text-2xl dark:text-[#e9bcff] text-[#5b2974] ">
+                        <div class="">
+                            <img src="dist/images/student5.jpg" style="width:50px; height:50px;"
+                                class="object-cover rounded-full " alt="">
+                        </div>
+                        <div class="">
+                            <h3>ايهم</h3>
+                            <span>5/3/2026</span>
+                        </div>
+
+                    </div>
+                    <a href="single.post.html"> <button class="btn w-full ">لمعرفة المزيد</button></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!--end  blog section  -->
+    </div>
+
+   
+        <!--start  footer section  -->
+    <footer
+        class=" relative pt-9 dark:bg-[#101828f4] bg-[#E7CAF6] border-t-4 border-t-[#35024e] dark:border-t-[#f7e6ff] ">
+        <div class="p-4 md:p-0 max-w-7xl mx-auto grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            <div class="f1 ">
+                <h3 class="text-3xl text-[#35024e] dark:text-gray-200 mb-5 font-bold">نبذة عنا:</h3>
+                <p class="text-[#35024e] text-2xl dark:text-gray-200 w-[80%] leading-9">
+                    تساهم مدرستنا في تشكيل شخصية الطفل
+                    وتطوير مهاراته الاجتماعية والعاطفية والمعرفية.
+
+                </p>
+            </div>
+            <div class="f2">
+                <h3 class="text-3xl mb-5 text-[#35024e] dark:text-gray-200 font-bold ">أهم الروابط </h3>
+                <ul class="flex flex-col gap-2 mb-5">
+                    <li class="dark:text-gray-200 text-[#35024e] text-2xl "><a href="index.html">الرئيسية</a></li>
+                    <li class="dark:text-gray-200 text-[#35024e] text-2xl"><a href="single.course.html">الكورسات</a> </li>
+                    <li class="dark:text-gray-200 text-[#35024e] text-2xl "><a href="">الخدمات</a> </li>
+                    <li class="dark:text-gray-200 text-[#35024e] text-2xl"><a href="single.post.html">المدونة</a> </li>
+                    <li class="dark:text-gray-200 text-[#35024e] text-2xl"><a href=""> اتصل بنا</a> </li>
+
+                </ul>
+            </div>
+            <div class="f3">
+                <h3 class="text-3xl dark:text-gray-200 text-[#35024e] mb-5  font-bold">اهم الكورسات</h3>
+                <ul class="flex flex-col text-xl gap-2">
+                    <li class="dark:text-gray-200 text-[#35024e]"><a href="">تنمية المهارات الإدراكية والسلوكية</a>
+                    </li>
+                    <li class="dark:text-gray-200 text-[#35024e]"><a href="">المهارات الحياتية والاجتماعية</a> </li>
+                    <li class="dark:text-gray-200 text-[#35024e]"><a href="">تنمية مهارات التواصل والنطق</a> </li>
+                    <li class="dark:text-gray-200 text-[#35024e]"><a href="">المهارات الأكاديمية الأساسية</a> </li>
+                    <li class="dark:text-gray-200 text-[#35024e]"><a href=""> دور الأهل في دعم رحلة التعلم</a> </li>
+
+
+                </ul>
+            </div>
+            <div class="f4">
+                <h3 class="text-3xl dark:text-gray-200 text-[#35024e] mb-5  ">النشرة البريدية</h3>
+                <form action="" class="flex flex-col dark:text-gray-200 text-[#35024e]  gap-3 caret-gray-200">
+                    <input type="text" name="" placeholder="البريد الاكتروني" id="" class="h-10 border border--200 ">
+                    <button class="btn">اشترك الان</button>
+                </form>
+            </div>
+        </div>
+        <div
+            class="flex  max-w-7xl mx-auto dark:text-gray-200 text-[#35024e]  border-t-2 dark:border-gray-200 border-[#35024e]  p-3 flex-col md:flex-row justify-between items-center gap-2">
+            <p>كافة الحقوق محفوظة لدى مدرسة الاطفال </p>
+            <p>كافة الحقوق محفوظة لدى مدرسة الاطفال </p>
+
+        </div>
+    </footer>
+    <!--end  footer section  -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="dist/js/script.js"></script>
+</body>
+
+</html>
